@@ -1,13 +1,13 @@
 {
-  "name": "test",
-  "version": "1.1.0",
+  "name": "@keiso-team-i/test",
+  "version": "1.1.1",
   "description": "Animated radio buttons component for react native",
   "main": "test.txt",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
-      "registry": "https://npm.pkg.github.com/"
+      "registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
