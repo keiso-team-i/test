@@ -8,25 +8,24 @@ on:
     types: [created]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
+      - name: Checuout
+        uses: actions/checkout@v3
 
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      # Setup .npmrc file to publish to GitHub Packages
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+          node-version: "16"
+          registry-url: https://npm.pkg.github.com
+          scope: "@<keiso-team-i>"
+
+      - name: Build npm package
+        run: npm ci && npm run build
+
+      - name: Publish npm package
+        run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
