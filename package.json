@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "Animated radio buttons component for react native",
+  "main": "test.txt",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keiso-team-i/test.git"
+  },
+  "author": "Keiso Team-i <team-i@keiso.co.jp>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keiso-team-i/test/issues"
+  },
+  "homepage": "https://github.com/keiso-team-i/test#readme",
+  "directories": {
+    "example": "example"
+  }
+}
