@@ -23,7 +23,7 @@ jobs:
           scope: "@<keiso-team-i>"
 
       - name: Build npm package
-        run: npm ci && npm run build
+        run: npm ci
 
       - name: Publish npm package
         run: npm publish
