@@ -20,7 +20,6 @@ jobs:
         with:
           node-version: "16"
           registry-url: https://npm.pkg.github.com
-          scope: "@<keiso-team-i>"
 
       - name: Build npm package
         run: npm ci
